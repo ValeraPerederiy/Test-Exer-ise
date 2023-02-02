@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="inputs">
+            <!--Storage input-->
+            <div class="input">
+                <div class="input_value">
+                    <label >Storage:</label>
+                    <span id="storageValue">0GB</span>
+                </div>
+                <input type="range" id="sliderStorage" min="0" max="1000" value="0" step="1" oninput="storageUpdate(value)">
+            </div>
+             <!--Transfer input-->
+            <div class="input">
+                <div class="input_value">
+                    <label>Transfer:</label>
+                    <span id="transferValue">0GB</span>
+                </div>
+                <input type="range" id="sliderTransfer" min="0" max="1000" value="0" step="1" oninput="transferUpdate(value)">
+            </div>
+        </div>
+
+        <div class="costCharts">
+            <ul class="companies">
+                <li class="liWithForm">backblaze
+                    <img src="icons/Backblaze.png" alt="backblazeLogo" height="40px">
+                </li>
+                <div>
+                    <li>bunny
+                        <img src="icons/Bunny.png" alt="bunnyLogo" height="40px">
+                    </li>
+                    
+                    <form id="bunnyForm">
+                        <input name="bunnyRadio" type="radio"  value="hdd" checked>
+                        <label for="hdd">HDD</label>
+                        <input name="bunnyRadio" type="radio"  value="ssd">
+                        <label for="ssd">SSD</label>
+                    </form>
+                </div>
+                
+                <div>
+                    <li class="liWithForm">scaleway
+                        <img src="icons/scaleway.png" alt="scalewayLogo" height="40px">
+                    </li>
+                    
+                    <form id="scalewayForm">
+                        <input name="scalewayRadio" type="radio" value="multy" checked>
+                        <label for="multy">Multy</label>
+                        <input name="scalewayRadio" type="radio" value="single">
+                        <label for="single">Single</label>
+                    </form>
+                </div>
+               
+                <li>vultr
+                    <img src="icons/vultr.png" alt="vultrLogo" height="40px">
+                </li>
+                
+            </ul>
+
+            <div class="charts">
+                <div>
+                    <span class="chart" id="backblazeChart"></span>
+                    <span class="cost" id="backblazeCost"></span>
+                </div>
+                <div>
+                    <span class="chart" id="bunnyChart"></span>
+                    <span class="cost" id="bunnyCost"></span>
+                </div>
+                <div>
+                    <span class="chart" id="scalewayChart"></span>
+                    <span class="cost" id="scalewayCost"></span>
+                </div>
+                <div>
+                    <span class="chart" id="vultrChart"></span>
+                    <span class="cost" id="vultrCost"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

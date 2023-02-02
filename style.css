@@ -1,0 +1,156 @@
+.container{
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.inputs{
+    display:flex;
+    justify-content: space-between;
+}
+
+.input input{
+    width:150px;
+}
+
+.input::before{
+    content: '0';
+    position: absolute;
+    top: 90px;
+    
+}
+
+.input::after{
+    content: '1000';
+    position: absolute;
+    top:90px;
+}
+
+.input_value{
+    font-size: 20px;
+}
+
+.costCharts{
+    display:flex
+}
+
+@media screen and (orientation: portrait) {
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .input{
+        margin-bottom: 40px;
+        position: relative;
+    }
+    .input::before{
+        content: '0';
+        position:absolute;
+        top:40px;    
+        left:220px;
+
+    }
+    
+    .input::after{
+        content: '1000';
+        position:absolute;
+        top:40px;
+    }
+    .costCharts{
+       flex-direction: column-reverse;
+    }
+
+    .companies{
+        display:flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 50px;
+
+    }
+    .companies div{
+        margin: 0 !important;
+    }
+    .companies li {
+        display: flex;
+        justify-content: start !important;
+        width:25%;
+        margin-top:0 !important;
+        padding:0;
+        
+    }
+
+    .charts{
+        transform: rotate(-90deg);
+        
+        width:100% !important;
+        margin-bottom: 150px !important;
+        height: 100%;
+    }
+  }
+
+.companies{
+    margin: 40px 50px 0 0 ;
+    padding: 0;
+    
+}
+
+.companies li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 20px;
+    list-style: none;
+    width: 150px;
+}
+
+.companies li:first-child{
+    margin-top: 10px;
+    
+}
+
+.companies li:last-child{
+    margin-top: 50px;
+}
+.companies div{
+    display:flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.companies form{
+    font-size: 10px;
+}
+
+.charts{
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    border-left: 3px solid #000;
+    width:60%;
+}
+
+.charts div{
+    display: flex;
+    
+}
+
+.cost{
+    margin: auto 10px;
+    font-size: 20px;
+}
+.chart{
+    width:1%;
+    height: 30px;
+    margin-bottom: 50px;
+    background: #999;
+    transition: width .2s;
+}
+
+.chart:first-child{
+    margin-top: 15px;
+}
+
